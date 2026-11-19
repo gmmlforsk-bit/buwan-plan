@@ -223,7 +223,7 @@ body[data-page=inside] #returnHome { background:var(--bg-vault); }
 .hero-artwork-wrap{grid-area:1/1/3/2;position:absolute;inset:0;background:#263c21;}
 .hero-artwork{position:absolute;inset:0;width:100%;height:100%;min-height:0;aspect-ratio:auto;display:block;overflow:hidden;}
 .hero-artwork:not(.framed)>img{object-fit:cover;object-position:50% 50%;}
-.hero-artwork.framed{display:block;background:linear-gradient(90deg,#152716b0,#25351e2b),url('/assets/karigurashi002.jpg') center 52%/cover;}
+.hero-artwork.framed{display:block;background:linear-gradient(90deg,#152716b0,#25351e2b),url('/buwan-plan/assets/karigurashi002.jpg') center 52%/cover;}
 .hero-artwork.framed img{position:absolute;inset:6% 11% 8% auto;margin:auto;height:80%;width:auto;max-width:37%!important;object-fit:contain;filter:drop-shadow(0 10px 18px #07150980);}
 .hero-artwork::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,25,15,.81),rgba(13,29,15,.46) 37%,transparent 69%),linear-gradient(0deg,#1025158a,transparent 37%);pointer-events:none;}
 .hero-copy{grid-area:1/1;align-self:end;position:relative;z-index:1;justify-content:end;width:min(46%,640px);margin-left:max(4vw,calc((100% - 1190px)/2));padding:70px 0 48px;background:none;color:white;pointer-events:none;}
@@ -250,7 +250,7 @@ body[data-page=inside] #returnHome { background:var(--bg-vault); }
 body[data-page=lists] .issue-search{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;}
 .issue-search input{width:min(100%,390px);padding:10px 15px;background:var(--bg-vault);border:1px solid #b6c1a8;border-radius:4px;color:var(--ink-ivory);}
 .issue-row[hidden],.weekly-feature[hidden]{display:none;}
-.list-spread{background:linear-gradient(90deg,#1a301eeb,#213821c9),url('/assets/karigurashi001.jpg') center/cover;color:#fff;}
+.list-spread{background:linear-gradient(90deg,#1a301eeb,#213821c9),url('/buwan-plan/assets/karigurashi001.jpg') center/cover;color:#fff;}
 .list-intro :is(h1,.list-deck){color:#f5f8e9;}
 .list-intro .archive-code{color:#dbeab3;}
 .list-intro .btn-couture{background:#e5edce;color:#24361d;border-color:transparent;}
@@ -308,7 +308,7 @@ body .hero-actions .btn-primary,.list-intro .btn-couture {background:#b7dcb5;col
 summary,.text-button,.archive-code,.section-title,.list-opening h1 {color:var(--gold-champagne);}
 #catalogViewToggle:hover,button:focus-visible,a:focus-visible,summary:focus-visible {outline-color:#b4e5b5;}
 /* Separate the complete release artwork from captions and decorative scenery. */
-.hero-grid {display:grid;grid-template-columns:minmax(250px, .8fr) minmax(0,1.7fr);grid-template-rows:auto;min-height:0;align-items:center;gap:clamp(18px,3vw,56px);padding:clamp(18px,2.8vw,48px) max(4vw,calc((100vw - 1440px)/2));background:linear-gradient(90deg,#112c1eed,#193822e8),url('/assets/karigurashi002.jpg') center/cover;}
+.hero-grid {display:grid;grid-template-columns:minmax(250px, .8fr) minmax(0,1.7fr);grid-template-rows:auto;min-height:0;align-items:center;gap:clamp(18px,3vw,56px);padding:clamp(18px,2.8vw,48px) max(4vw,calc((100vw - 1440px)/2));background:linear-gradient(90deg,#112c1eed,#193822e8),url('/buwan-plan/assets/karigurashi002.jpg') center/cover;}
 .hero-copy {grid-area:auto;width:auto;align-self:center;margin:0;padding:12px 0;}
 .hero .hero-copy h1 {font-size:clamp(40px,5.2vw,80px);}
 .hero-artwork-wrap {position:relative;inset:auto;grid-area:auto;background:transparent;min-width:0;width:100%;display:block;}

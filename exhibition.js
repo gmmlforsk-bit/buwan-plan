@@ -6,7 +6,7 @@ window.FY_EXHIBITION = [
     "title": "龙猫",
     "orig": "となりのトトロ",
     "meta": "1988  /  剧场版",
-    "src": "/assets/totoro025.jpg",
+    "src": "/buwan-plan/assets/totoro025.jpg",
     "id": "bgm-302"
   },
   {
@@ -16,7 +16,7 @@ window.FY_EXHIBITION = [
     "title": "千与千寻",
     "orig": "千と千尋の神隠し",
     "meta": "2001  /  剧场版",
-    "src": "/assets/chihiro041.jpg",
+    "src": "/buwan-plan/assets/chihiro041.jpg",
     "id": "bgm-311"
   },
   {
@@ -26,7 +26,7 @@ window.FY_EXHIBITION = [
     "title": "乒乓",
     "orig": "ピンポン THE ANIMATION",
     "meta": "2014  /  TV",
-    "src": "/assets/pingpong.jpg",
+    "src": "/buwan-plan/assets/pingpong.jpg",
     "id": "ping-pong"
   },
   {
@@ -36,7 +36,7 @@ window.FY_EXHIBITION = [
     "title": "幽灵公主",
     "orig": "もののけ姫",
     "meta": "1997  /  剧场版",
-    "src": "/assets/mononoke010.jpg",
+    "src": "/buwan-plan/assets/mononoke010.jpg",
     "id": "bgm-310"
   },
   {
@@ -46,7 +46,7 @@ window.FY_EXHIBITION = [
     "title": "孤独摇滚！",
     "orig": "ぼっち・ざ・ろっく！",
     "meta": "2022  /  TV",
-    "src": "/assets/bocchi.jpg",
+    "src": "/buwan-plan/assets/bocchi.jpg",
     "id": "bocchi-the-rock"
   },
   {
@@ -56,7 +56,7 @@ window.FY_EXHIBITION = [
     "title": "星际牛仔",
     "orig": "カウボーイビバップ",
     "meta": "1998  /  TV",
-    "src": "/assets/cover-253.jpg",
+    "src": "/buwan-plan/assets/cover-253.jpg",
     "id": "cowboy-bebop"
   },
   {
@@ -66,7 +66,7 @@ window.FY_EXHIBITION = [
     "title": "葬送的芙莉莲",
     "orig": "葬送のフリーレン",
     "meta": "2023  /  TV",
-    "src": "/assets/cover-400602.jpg",
+    "src": "/buwan-plan/assets/cover-400602.jpg",
     "id": "frieren"
   },
   {
@@ -76,7 +76,7 @@ window.FY_EXHIBITION = [
     "title": "虫师",
     "orig": "蟲師",
     "meta": "2005  /  TV",
-    "src": "/assets/cover-340.jpg",
+    "src": "/buwan-plan/assets/cover-340.jpg",
     "id": "mushishi"
   },
   {
@@ -86,7 +86,7 @@ window.FY_EXHIBITION = [
     "title": "新世纪福音战士",
     "orig": "新世紀エヴァンゲリオン",
     "meta": "1995  /  TV",
-    "src": "/assets/cover-265.jpg",
+    "src": "/buwan-plan/assets/cover-265.jpg",
     "id": "evangelion"
   },
   {
@@ -96,7 +96,7 @@ window.FY_EXHIBITION = [
     "title": "奇巧计程车",
     "orig": "オッドタクシー",
     "meta": "2021  /  TV",
-    "src": "/assets/cover-325285.jpg",
+    "src": "/buwan-plan/assets/cover-325285.jpg",
     "id": "odd-taxi"
   },
   {
@@ -106,7 +106,7 @@ window.FY_EXHIBITION = [
     "title": "攻壳机动队",
     "orig": "GHOST IN THE SHELL / 攻殻機動隊",
     "meta": "1995  /  剧场版",
-    "src": "/assets/cover-237.jpg",
+    "src": "/buwan-plan/assets/cover-237.jpg",
     "id": "ghost-in-the-shell"
   },
   {
@@ -116,7 +116,7 @@ window.FY_EXHIBITION = [
     "title": "千年女优",
     "orig": "千年女優",
     "meta": "2002  /  剧场版",
-    "src": "/assets/cover-840.jpg",
+    "src": "/buwan-plan/assets/cover-840.jpg",
     "id": "millennium-actress"
   },
   {
@@ -126,7 +126,7 @@ window.FY_EXHIBITION = [
     "title": "混沌武士",
     "orig": "サムライチャンプルー",
     "meta": "2004  /  TV",
-    "src": "/assets/cover-254.jpg",
+    "src": "/buwan-plan/assets/cover-254.jpg",
     "id": "samurai-champloo"
   },
   {
@@ -136,7 +136,7 @@ window.FY_EXHIBITION = [
     "title": "侧耳倾听",
     "orig": "耳をすませば",
     "meta": "1995  /  剧场版",
-    "src": "/assets/mimi025.jpg",
+    "src": "/buwan-plan/assets/mimi025.jpg",
     "id": "whisper-of-the-heart"
   },
   {
@@ -146,7 +146,7 @@ window.FY_EXHIBITION = [
     "title": "平家物语",
     "orig": "平家物語",
     "meta": "2022  /  TV",
-    "src": "/assets/cover-348335.jpg",
+    "src": "/buwan-plan/assets/cover-348335.jpg",
     "id": "heike-monogatari"
   },
   {
@@ -156,7 +156,7 @@ window.FY_EXHIBITION = [
     "title": "阿基拉",
     "orig": "AKIRA",
     "meta": "1988  /  剧场版",
-    "src": "/assets/cover-5118.jpg",
+    "src": "/buwan-plan/assets/cover-5118.jpg",
     "id": "bgm-5118"
   },
   {
@@ -166,7 +166,7 @@ window.FY_EXHIBITION = [
     "title": "红辣椒",
     "orig": "パプリカ",
     "meta": "2006  /  剧场版",
-    "src": "/assets/cover-841.jpg",
+    "src": "/buwan-plan/assets/cover-841.jpg",
     "id": "bgm-841"
   },
   {
@@ -176,7 +176,7 @@ window.FY_EXHIBITION = [
     "title": "昭和元禄落语心中",
     "orig": "昭和元禄落語心中",
     "meta": "2016  /  TV",
-    "src": "/assets/cover-119394.jpg",
+    "src": "/buwan-plan/assets/cover-119394.jpg",
     "id": "rakugo-shinju"
   },
   {
@@ -186,7 +186,7 @@ window.FY_EXHIBITION = [
     "title": "水星领航员",
     "orig": "ARIA The ANIMATION",
     "meta": "2005  /  TV",
-    "src": "/assets/cover-531.jpg",
+    "src": "/buwan-plan/assets/cover-531.jpg",
     "id": "aria-animation"
   },
   {
@@ -196,7 +196,7 @@ window.FY_EXHIBITION = [
     "title": "莉兹与青鸟",
     "orig": "リズと青い鳥",
     "meta": "2018  /  剧场版",
-    "src": "/assets/liz-key.jpg",
+    "src": "/buwan-plan/assets/liz-key.jpg",
     "id": "liz-and-the-blue-bird"
   },
   {
@@ -206,7 +206,7 @@ window.FY_EXHIBITION = [
     "title": "机动警察剧场版2 和平保卫战",
     "orig": "機動警察パトレイバー 2 the Movie",
     "meta": "1993  /  剧场版",
-    "src": "/assets/cover-321.jpg",
+    "src": "/buwan-plan/assets/cover-321.jpg",
     "id": "bgm-321"
   },
   {
@@ -216,7 +216,7 @@ window.FY_EXHIBITION = [
     "title": "四叠半神话大系",
     "orig": "四畳半神話大系",
     "meta": "2010  /  TV",
-    "src": "/assets/cover-4019.jpg",
+    "src": "/buwan-plan/assets/cover-4019.jpg",
     "id": "tatami-galaxy"
   },
   {
@@ -226,7 +226,7 @@ window.FY_EXHIBITION = [
     "title": "冰菓",
     "orig": "氷菓",
     "meta": "2012  /  TV",
-    "src": "/assets/cover-27364.jpg",
+    "src": "/buwan-plan/assets/cover-27364.jpg",
     "id": "hyouka"
   },
   {
@@ -236,7 +236,7 @@ window.FY_EXHIBITION = [
     "title": "玲音",
     "orig": "Serial Experiments Lain",
     "meta": "1998  /  TV",
-    "src": "/assets/cover-2582.jpg",
+    "src": "/buwan-plan/assets/cover-2582.jpg",
     "id": "serial-experiments-lain"
   },
   {
@@ -246,7 +246,7 @@ window.FY_EXHIBITION = [
     "title": "蓦然回首",
     "orig": "ルックバック",
     "meta": "2024  /  剧场版",
-    "src": "/assets/lookback-top.jpg",
+    "src": "/buwan-plan/assets/lookback-top.jpg",
     "id": "look-back"
   }
 ];

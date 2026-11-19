@@ -41,8 +41,8 @@
       radar:flagshipIds.has(id) ? editorial.radar : null
     };
     if (!editorial) item.summary = base.summary;
-    if (stills[bgmId]) item.realStill = '/assets/' + stills[bgmId] + '.jpg';
-    if (covers.has(bgmId) || extraCovers.has(bgmId)) item.realPoster = '/assets/' + bgmId + '.jpg';
+    if (stills[bgmId]) item.realStill = '/buwan-plan/assets/' + stills[bgmId] + '.jpg';
+    if (covers.has(bgmId) || extraCovers.has(bgmId)) item.realPoster = '/buwan-plan/assets/' + bgmId + '.jpg';
     const newPoster = window.FY_COVER_LIBRARY[bgmId];
     const previousWidth = window.FY_IMAGE_SIZES[item.realPoster]?.width || 0;
     if (newPoster && newPoster.width > previousWidth) item.realPoster = newPoster.src;
@@ -61,7 +61,7 @@
   engine.renderEditorialCover = engine.renderGenerativeArtSVG;
   engine.renderGenerativeArtSVG = (item, mode = 'poster') => {
     const local = mode === 'still' ? item.realStill || item.realPoster : item.realPoster || item.realStill;
-    const source = local || '/artwork/' + item.bgmId;
+    const source = local || (window.FY_POSTERS[item.bgmId]?.[0] || '');
     return '<img class="archive-image ' + mode + '" src="' + escape(source) + '" data-work-image="' + item.bgmId +
       '" data-art-mode="' + mode + '" alt="' + escape(item.title) + '" loading="lazy" decoding="async">';
   };

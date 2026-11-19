@@ -21,7 +21,7 @@
       image.src = film.src;
       ScreenMotion.swapArt(shelf.querySelector(".hero-artwork"), image);
     }
-    for (const a of shelf.querySelectorAll("[data-work]")) a.href = "/anime/"+film.id+"?from=home";
+    for (const a of shelf.querySelectorAll("[data-work]")) a.href = "/buwan-plan/anime/"+film.id+"?from=home";
     element("position").textContent = String(index+1).padStart(2,"0")+" / "+films.length;
   }
   function schedule() {

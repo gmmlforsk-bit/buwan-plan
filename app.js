@@ -12,13 +12,13 @@
   const animeById = Object.fromEntries(catalog.map((a) => [a.id, a]));
   const listById = Object.fromEntries(featuredLists.map((l) => [l.id, l]));
 
-  if (location.pathname === "/index.html") history.replaceState(history.state, "", "/" + location.search + location.hash);
+  if (window.bwPath() === "/index.html") history.replaceState(history.state, "", "/" + location.search + location.hash);
   let initialAccount;
   const publicPages = new Set(["/", "/find", "/lists", "/play"]);
   let reviewRequest;
   function readCriticism() {
     if (!reviewRequest) {
-      reviewRequest = fetch("/catalog/criticism.json").then(response => {
+      reviewRequest = fetch("/buwan-plan/catalog/criticism.json").then(response => {
         if (!response.ok) throw new Error("暂时无法读取影评");
         return response.json();
       }).catch(() => { reviewRequest = null; return {}; });
@@ -468,7 +468,7 @@
   function renderCuratedSection() {
     const lead = listById["issue-43"] || featuredLists[0];
     $("navIssueCount").textContent = String(featuredLists.length);
-    const full = location.pathname === "/lists";
+    const full = window.bwPath() === "/lists";
     const lines = ["全部", "按时间", "按观看对象", "按审美", "按主创", "按讨论问题", "按补完路线"];
     const directory = [...featuredLists].reverse();
     const visible = full ? directory.filter(list => activeEditorialLine === "全部" || getListEditorialLine(list) === activeEditorialLine) : [];
@@ -492,7 +492,7 @@
     }).join("");
     $("editorialLineTabs").onclick = e => { if(e.target.dataset.line){activeEditorialLine=e.target.dataset.line;renderCuratedSection();} };
     $("asymmetricFeatured").innerHTML = !full || activeEditorialLine === "全部" ?
-      `<a class="weekly-feature" href="/list/${lead.id}" data-list-id="${lead.id}"><img src="/assets/karigurashi001.jpg" alt="借东西的小人阿丽埃蒂中的庭院小径" loading="lazy"><div><span class="archive-code">本周选单 · ${esc(lead.editorialLine)}</span><h3>${esc(lead.title)}</h3><p>${esc(lead.lead)}</p><strong>阅读片单 ↗</strong></div></a>` : "";
+      `<a class="weekly-feature" href="/list/${lead.id}" data-list-id="${lead.id}"><img src="/buwan-plan/assets/karigurashi001.jpg" alt="借东西的小人阿丽埃蒂中的庭院小径" loading="lazy"><div><span class="archive-code">本周选单 · ${esc(lead.editorialLine)}</span><h3>${esc(lead.title)}</h3><p>${esc(lead.lead)}</p><strong>阅读片单 ↗</strong></div></a>` : "";
     if (!full) {
       const picks = ["issue-97","issue-113","issue-120"].map(id => listById[id]);
       $("asymmetricFeatured").insertAdjacentHTML("beforeend", `<nav class="more-issues" aria-label="更多主题片单">${picks.map(l =>
@@ -606,7 +606,7 @@
         item.sakuga,item.music,...(item.tags || [])].filter(Boolean).join(" ").toLowerCase()
     }));
     try {
-      worker = new Worker("/search-worker.js?build=reader1");
+      worker = new Worker("/buwan-plan/search-worker.js?build=reader1");
       worker.onmessage = ({data}) => applyResults(data.ids, data.requestId);
       worker.onerror = event => {
         event.preventDefault();
@@ -746,7 +746,7 @@
       card.onclick = () => navigate(`/anime/${card.dataset.animeId}?from=search`);
     });
 
-    if (location.pathname === "/find") ScreenMotion.brighten(grid);
+    if (window.bwPath() === "/find") ScreenMotion.brighten(grid);
     $("paginationBottomBar").innerHTML = `
       <span class="typo-t4-timecode">当前位于第 ${currentPage} / ${totalPages} 页（每页 ${pageSize} 部，共 ${total} 部）</span>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
@@ -761,7 +761,7 @@
   }
 
   function goToPage(targetPage) {
-    if(location.pathname!=="/find")navigate("/find");
+    if(window.bwPath()!=="/find")navigate("/find");
     const total = getTotalPages();
     currentPage = Math.max(1, Math.min(total, targetPage));
     activeDecadeGroup = Math.floor((currentPage - 1) / 10);
@@ -948,26 +948,27 @@
     ["viewPlay", "viewHome", "viewList", "viewAnime", "viewUser", "viewCommunity", "viewMine"].forEach((id) => {
       $(id).hidden = id !== viewId;
     });
-    $("navHome").classList.toggle("is-active", viewId === "viewHome" && location.pathname === "/");
+    $("navHome").classList.toggle("is-active", viewId === "viewHome" && window.bwPath() === "/");
     $("navCommunity").classList.toggle("is-active", viewId === "viewCommunity");
     $("navPlay").classList.toggle("is-active", viewId === "viewPlay");
     $("navMine").classList.toggle("is-active", viewId === "viewMine");
   }
 
   function navigate(path, { replace = false } = {}) {
+    path = path.replace(/^\/buwan-plan(?=\/|$)/, "") || "/";
     if (!replace && routeSequence && path === currentRouteKey) {
       window.scrollTo({top:0, behavior:"instant"});
       return;
     }
     scrollCache.set(currentRouteKey, window.scrollY);
-    if (replace) history.replaceState({ path }, "", path);
-    else history.pushState({ path, internal: true, source: currentRouteKey }, "", path);
+    if (replace) history.replaceState({ path }, "", "/buwan-plan"+path);
+    else history.pushState({ path, internal: true, source: currentRouteKey }, "", "/buwan-plan"+path);
     renderRoute(path, { isBack: false });
   }
 
   window.addEventListener("popstate", () => {
     scrollCache.set(currentRouteKey, window.scrollY);
-    renderRoute(location.pathname + location.search + location.hash, { isBack: true });
+    renderRoute(window.bwPath() + location.search + location.hash, { isBack: true });
   });
 
   async function renderRoute(fullPath, { isBack }) {
@@ -1180,7 +1181,7 @@
     };
 
     const openingWork = animeById[list.items[0]?.animeId];
-    const cover = openingWork && (openingWork.realStill || openingWork.realPoster || "/artwork/" + openingWork.bgmId);
+    const cover = openingWork && (openingWork.realStill || openingWork.realPoster || (window.FY_POSTERS[openingWork.bgmId]?.[0] || ""));
     $("listContent").innerHTML = `
       <div class="viz-panel list-opening">
         <div class="list-spread">
@@ -1233,7 +1234,7 @@
         });
         await loadBootstrap();
       }
-      if (location.pathname === "/list/"+list.id) renderListPage(list.id, activeLayout);
+      if (window.bwPath() === "/list/"+list.id) renderListPage(list.id, activeLayout);
     };
 
     $("listContent").querySelectorAll("[data-open-anime]").forEach((el) => {
@@ -2211,7 +2212,7 @@
       return;
     }
     const form=$("commentPostForm");
-    const resume=form && location.pathname.startsWith("/anime/") ? ["commentTextarea","commentEpSelect","discussionEpisodeFilter","commentRatingSelect","replyParentId","replyingText"].map(id=>[id,$(id).value ?? $(id).textContent]) : [];
+    const resume=form && window.bwPath().startsWith("/anime/") ? ["commentTextarea","commentEpSelect","discussionEpisodeFilter","commentRatingSelect","replyParentId","replyingText"].map(id=>[id,$(id).value ?? $(id).textContent]) : [];
     const spoiler=$("commentSpoilerCheck")?.checked, replyVisible=$("replyingBanner") && !$("replyingBanner").hidden;
     const y=scrollY;
     $("authDialog").close();$("authPassword").value="";
@@ -2466,8 +2467,8 @@
     if (!id || img.classList.contains("leaving")) return;
     const subject = animeById[window.FY_ID_MAP[id] || "bgm-" + id];
     if (!subject) return;
-    const backup = "/artwork/" + id;
-    if (img.getAttribute("src") !== backup) {
+    const backup = window.FY_POSTERS[id]?.[0] || "";
+    if (backup && img.getAttribute("src") !== backup) {
       img.removeAttribute("srcset");
       img.src = backup;
       return;
@@ -2486,7 +2487,7 @@
 
   $("footerStats").textContent = `全库收录 ${archiveMeta.totalIndexedEntries.toLocaleString()} 个动画条目（${archiveMeta.ratedEntries.toLocaleString()} 个含 Bangumi 评分）· 20 部旗舰档案 · ${featuredLists.length} 期策展。`;
 
-  if (location.pathname === "/find") {
+  if (window.bwPath() === "/find") {
     const params = new URLSearchParams(location.search);
     $("catalogQuery").value = $("topQuery").value = params.get("q") || "";
     currentPage = Math.max(1, Math.floor(Number(params.get("page"))) || 1);
@@ -2509,7 +2510,7 @@
     renderSocialSection();
   });
   document.querySelector(".topbar").inert = false;
-  renderRoute(location.pathname + location.search + location.hash, { isBack: false }).then(() => {
+  renderRoute(window.bwPath() + location.search + location.hash, { isBack: false }).then(() => {
     document.body.dataset.interactive = "true";
     $("startupShelf").remove();
     setTimeout(() => runCatalogFilter(), 0);

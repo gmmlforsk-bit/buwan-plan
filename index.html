@@ -11,10 +11,11 @@
       location.replace("http://127.0.0.1:" + (packaged ? "18766" : "18765") + "/");
     }
   </script>
+  <script src="/buwan-plan/posters-data.js"></script><script src="/buwan-plan/pages-runtime.js"></script>
   <title>补完计划 · 动画选片与观影记录</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/magazine.css?build=motion3">
-  <link rel="stylesheet" href="/reader.css?build=exhibit2">
+  <link rel="stylesheet" href="/buwan-plan/style.css">
+  <link rel="stylesheet" href="/buwan-plan/magazine.css?build=motion3">
+  <link rel="stylesheet" href="/buwan-plan/reader.css?build=exhibit2">
 </head>
 <body>
   <!-- 动态环境光晕与 35mm 胶片颗粒层 -->
@@ -25,7 +26,7 @@
   <!-- 顶部全局展映导航栏 -->
   <header class="topbar">
     <div class="topbar-inner">
-      <a href="/" class="brand" id="brandHome">
+      <a href="/buwan-plan/" class="brand" id="brandHome">
         <svg class="brand-mark-svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path fill="currentColor" d="M2 6 23 1l4 20-21 6z"/><path fill="white" d="m10 9 9 3-7 7z"/></svg>
         <span class="brand-name">补完计划</span>
       </a>
@@ -54,22 +55,22 @@
   </header><button class="subbar-close" id="returnHome" type="button" data-close-home aria-label="关闭并返回首页" title="返回首页"><svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button><div id="notice" role="status" hidden></div>
 
   <!-- ==================== 第一层：首页（展映空间） ==================== -->
-  <section id="startupShelf" data-native><header class="topbar"><div class="topbar-inner"><a href="/" class="brand">
+  <section id="startupShelf" data-native><header class="topbar"><div class="topbar-inner"><a href="/buwan-plan/" class="brand">
         <svg class="brand-mark-svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path fill="currentColor" d="M2 6 23 1l4 20-21 6z"/><path fill="white" d="m10 9 9 3-7 7z"/></svg>
         <span class="brand-name">补完计划</span>
-      </a><form class="top-search" action="/find"><input type="search" name="q" placeholder="搜作品、导演、题材" aria-label="搜索片库"></form><nav class="topnav" aria-label="主导航"><a class="nav-btn is-active" href="/">首页</a><a class="nav-btn" href="/find">找片</a><a class="nav-btn" href="/lists">片单 <small>120</small></a><a class="nav-btn" href="/play">游戏室</a><a class="nav-btn" href="/community">讨论</a><a class="nav-btn" href="/mine">我的</a></nav></div></header>
+      </a><form class="top-search" action="/find"><input type="search" name="q" placeholder="搜作品、导演、题材" aria-label="搜索片库"></form><nav class="topnav" aria-label="主导航"><a class="nav-btn is-active" href="/buwan-plan/">首页</a><a class="nav-btn" href="/find">找片</a><a class="nav-btn" href="/buwan-plan/lists">片单 <small>120</small></a><a class="nav-btn" href="/play">游戏室</a><a class="nav-btn" href="/community">讨论</a><a class="nav-btn" href="/mine">我的</a></nav></div></header>
 <section class="hero exhibition-hero"><div class="hero-grid">
 <div class="hero-copy"><div class="hero-meta-top"><span class="archive-code tabular" data-group>日常的观察力</span><span class="hero-kicker" data-meta>1988  /  剧场版</span></div><h1 class="typo-t1-marquee" data-title>龙猫</h1><div class="typo-t2-auteur" data-orig>となりのトトロ</div><p class="typo-t3-editorial exhibition-note" data-note>沿着草叶间的小径往里走，林子深处，有个毛茸茸的邻居正在午睡。</p>
-<div class="hero-actions"><a class="btn-primary" data-work href="/anime/302">查看作品 ↗</a><a class="btn-couture" href="#opening-issues">本周片单</a><a href="#opening-selection">全部 25 部</a></div></div>
-<div class="hero-artwork-wrap"><a class="hero-artwork" data-work href="/anime/302"><img data-image src="/assets/totoro025.jpg" alt="龙猫" fetchpriority="high"></a>
+<div class="hero-actions"><a class="btn-primary" data-work href="/buwan-plan/anime/302">查看作品 ↗</a><a class="btn-couture" href="#opening-issues">本周片单</a><a href="#opening-selection">全部 25 部</a></div></div>
+<div class="hero-artwork-wrap"><a class="hero-artwork" data-work href="/buwan-plan/anime/302"><img data-image src="/buwan-plan/assets/totoro025.jpg" alt="龙猫" fetchpriority="high"></a>
 <div class="hero-controls"><div class="playbar" data-playbar hidden><button type="button" data-step="-1" aria-label="上一部">‹</button><span data-position>01 / 25</span><button type="button" data-step="1" aria-label="下一部">›</button><button type="button" data-pause>暂停</button></div></div></div>
 </div></section>
-<div class="app-container"><section class="section decision-band"><div><h2 class="section-title">今晚，还有 90 分钟。</h2><p class="muted-sm">任选一部，今晚就能看到片尾。</p></div><div class="decision-grid"><a class="decision-card" href="/anime/480441"><span class="archive-code">58 分钟看完</span><h3>《蓦然回首》</h3></a><a class="decision-card" href="/anime/237"><span class="archive-code">82 分钟看完</span><h3>《攻壳机动队》</h3></a></div></section>
-<section class="section" id="opening-issues"><div class="section-header"><h2 class="section-title">本周片单</h2><a class="btn-couture" href="/lists">全部 120 期 →</a></div><div class="asymmetric-grid"><a class="weekly-feature" href="/list/issue-43"><img src="/assets/karigurashi001.jpg" alt="林间庭院" loading="lazy"><div><span class="archive-code">本周选单 · 按审美</span><h3>走到树荫深处</h3><p>贴着叶脉走一小段，草丛就有了树林的高度。</p><strong>阅读片单 ↗</strong></div></a><nav class="more-issues"><a href="/list/issue-97"><small>按观看对象</small><strong>跑步搭子也能看的三场比赛</strong><span aria-hidden="true">↗</span></a><a href="/list/issue-113"><small>按时间</small><strong>今晚只看三部的开场</strong><span aria-hidden="true">↗</span></a><a href="/list/issue-120"><small>按补完路线</small><strong>把地图倒过来再走一次</strong><span aria-hidden="true">↗</span></a></nav></div></section>
-<details class="section" id="opening-selection"><summary class="section-title">25 部选映</summary><div class="exhibition-selection"><a href="/anime/302">龙猫</a><a href="/anime/311">千与千寻</a><a href="/anime/93739">乒乓</a><a href="/anime/310">幽灵公主</a><a href="/anime/328609">孤独摇滚！</a><a href="/anime/253">星际牛仔</a><a href="/anime/400602">葬送的芙莉莲</a><a href="/anime/340">虫师</a><a href="/anime/265">新世纪福音战士</a><a href="/anime/325285">奇巧计程车</a><a href="/anime/237">攻壳机动队</a><a href="/anime/840">千年女优</a><a href="/anime/254">混沌武士</a><a href="/anime/500">侧耳倾听</a><a href="/anime/348335">平家物语</a><a href="/anime/5118">阿基拉</a><a href="/anime/841">红辣椒</a><a href="/anime/119394">昭和元禄落语心中</a><a href="/anime/531">水星领航员</a><a href="/anime/216371">莉兹与青鸟</a><a href="/anime/321">机动警察剧场版2 和平保卫战</a><a href="/anime/4019">四叠半神话大系</a><a href="/anime/27364">冰菓</a><a href="/anime/2582">玲音</a><a href="/anime/480441">蓦然回首</a></div></details></div><!-- end opening content --></section>
-  <script src="/exhibition.js"></script>
-  <script src="/screen-motion.js"></script>
-  <script src="/opening.js?build=motion3"></script>
+<div class="app-container"><section class="section decision-band"><div><h2 class="section-title">今晚，还有 90 分钟。</h2><p class="muted-sm">任选一部，今晚就能看到片尾。</p></div><div class="decision-grid"><a class="decision-card" href="/buwan-plan/anime/480441"><span class="archive-code">58 分钟看完</span><h3>《蓦然回首》</h3></a><a class="decision-card" href="/buwan-plan/anime/237"><span class="archive-code">82 分钟看完</span><h3>《攻壳机动队》</h3></a></div></section>
+<section class="section" id="opening-issues"><div class="section-header"><h2 class="section-title">本周片单</h2><a class="btn-couture" href="/buwan-plan/lists">全部 120 期 →</a></div><div class="asymmetric-grid"><a class="weekly-feature" href="/buwan-plan/list/issue-43"><img src="/buwan-plan/assets/karigurashi001.jpg" alt="林间庭院" loading="lazy"><div><span class="archive-code">本周选单 · 按审美</span><h3>走到树荫深处</h3><p>贴着叶脉走一小段，草丛就有了树林的高度。</p><strong>阅读片单 ↗</strong></div></a><nav class="more-issues"><a href="/buwan-plan/list/issue-97"><small>按观看对象</small><strong>跑步搭子也能看的三场比赛</strong><span aria-hidden="true">↗</span></a><a href="/buwan-plan/list/issue-113"><small>按时间</small><strong>今晚只看三部的开场</strong><span aria-hidden="true">↗</span></a><a href="/buwan-plan/list/issue-120"><small>按补完路线</small><strong>把地图倒过来再走一次</strong><span aria-hidden="true">↗</span></a></nav></div></section>
+<details class="section" id="opening-selection"><summary class="section-title">25 部选映</summary><div class="exhibition-selection"><a href="/buwan-plan/anime/302">龙猫</a><a href="/buwan-plan/anime/311">千与千寻</a><a href="/buwan-plan/anime/93739">乒乓</a><a href="/buwan-plan/anime/310">幽灵公主</a><a href="/buwan-plan/anime/328609">孤独摇滚！</a><a href="/buwan-plan/anime/253">星际牛仔</a><a href="/buwan-plan/anime/400602">葬送的芙莉莲</a><a href="/buwan-plan/anime/340">虫师</a><a href="/buwan-plan/anime/265">新世纪福音战士</a><a href="/buwan-plan/anime/325285">奇巧计程车</a><a href="/buwan-plan/anime/237">攻壳机动队</a><a href="/buwan-plan/anime/840">千年女优</a><a href="/buwan-plan/anime/254">混沌武士</a><a href="/buwan-plan/anime/500">侧耳倾听</a><a href="/buwan-plan/anime/348335">平家物语</a><a href="/buwan-plan/anime/5118">阿基拉</a><a href="/buwan-plan/anime/841">红辣椒</a><a href="/buwan-plan/anime/119394">昭和元禄落语心中</a><a href="/buwan-plan/anime/531">水星领航员</a><a href="/buwan-plan/anime/216371">莉兹与青鸟</a><a href="/buwan-plan/anime/321">机动警察剧场版2 和平保卫战</a><a href="/buwan-plan/anime/4019">四叠半神话大系</a><a href="/buwan-plan/anime/27364">冰菓</a><a href="/buwan-plan/anime/2582">玲音</a><a href="/buwan-plan/anime/480441">蓦然回首</a></div></details></div><!-- end opening content --></section>
+  <script src="/buwan-plan/exhibition.js"></script>
+  <script src="/buwan-plan/screen-motion.js"></script>
+  <script src="/buwan-plan/opening.js?build=motion3"></script>
   <p id="routeLoading" role="status" hidden>正在读取书架…</p>
   <main id="viewHome" class="view" hidden>
     <!-- 25 部作品轮播展映台 -->
@@ -537,18 +538,18 @@
     </div>
   </footer>
 
-  <script src="/curated_lists.js"></script>
-  <script src="/episodes_and_reviews.js"></script>
-  <script src="/visual_engine.js"></script>
-  <script src="/catalog/index.js"></script>
-  <script src="/catalog/facts.js"></script>
-  <script src="/catalog/mapping.js"></script>
-  <script src="/covers.js"></script>
-  <script src="/cover-library.js"></script>
-  <script src="/image-sizes.js"></script>
-  <script src="/catalog-bridge.js?build=reader1"></script>
-  <script src="/screening-room.js"></script>
-  <script src="/search-worker.js?build=reader1"></script>
-  <script src="/app.js?build=motion3"></script>
+  <script src="/buwan-plan/curated_lists.js"></script>
+  <script src="/buwan-plan/episodes_and_reviews.js"></script>
+  <script src="/buwan-plan/visual_engine.js"></script>
+  <script src="/buwan-plan/catalog/index.js"></script>
+  <script src="/buwan-plan/catalog/facts.js"></script>
+  <script src="/buwan-plan/catalog/mapping.js"></script>
+  <script src="/buwan-plan/covers.js"></script>
+  <script src="/buwan-plan/cover-library.js"></script>
+  <script src="/buwan-plan/image-sizes.js"></script>
+  <script src="/buwan-plan/catalog-bridge.js?build=reader1"></script>
+  <script src="/buwan-plan/screening-room.js"></script>
+  <script src="/buwan-plan/search-worker.js?build=reader1"></script>
+  <script src="/buwan-plan/app.js?build=motion3"></script>
 </body>
 </html>

@@ -54,8 +54,8 @@ function createScreeningRoom({ root, works, selections, escapeHtml, artwork }) {
   function render() {
     if (!game) {
       root.innerHTML = '<h1>放映游戏室</h1><p class="game-intro">选一种玩法。每局五题，答完可以把遇见的作品带回片库。</p><div class="game-modes">'+
-        '<button class="game-mode" data-mode="year"><img src="/assets/totoro025.jpg" alt=""><span><strong>年代对决</strong><small>对照两张海报，选出更早面世的一部。</small></span></button>'+
-        '<button class="game-mode" data-mode="clue"><img src="/assets/chihiro041.jpg" alt=""><span><strong>线索猜片</strong><small>读一段场景描述，从三部作品里找出片名。</small></span></button></div>';
+        '<button class="game-mode" data-mode="year"><img src="/buwan-plan/assets/totoro025.jpg" alt=""><span><strong>年代对决</strong><small>对照两张海报，选出更早面世的一部。</small></span></button>'+
+        '<button class="game-mode" data-mode="clue"><img src="/buwan-plan/assets/chihiro041.jpg" alt=""><span><strong>线索猜片</strong><small>读一段场景描述，从三部作品里找出片名。</small></span></button></div>';
       return;
     }
     const { mode, rounds, index, answers } = game;
