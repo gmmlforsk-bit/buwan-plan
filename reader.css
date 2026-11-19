@@ -1,0 +1,23 @@
+.reader-page{margin:0;background:#10281d;color:#e7f4e7;font:16px/1.65 system-ui,"PingFang SC",sans-serif}
+.reader{box-sizing:border-box;max-width:960px;margin:0 auto;padding:24px clamp(16px,4vw,40px) 50px}
+.reader nav,.reader form,.reader-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:16px 0}
+.reader a{color:#c5e3bd;text-underline-offset:4px}.reader h1,.reader h2,.reader strong{font-family:"Songti SC",serif;color:#f3f8f0}
+.reader h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:24px 0}
+.reader-hero{display:block;position:relative;background:#172f22;text-decoration:none}
+.reader-hero img{width:100%;max-height:42vh;display:block;object-fit:contain;background:#12291c}
+.reader-hero strong{display:block;padding:8px 14px;font-size:22px}
+.reader form input,.reader form button{font:inherit;border:1px solid #759479;padding:7px 11px;border-radius:4px;background:#1d3a29;color:#edf6eb;max-width:100%}
+.reader form input{flex:1;min-width:90px}.reader form button{cursor:pointer}
+.reader-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(145px,42%),1fr));gap:14px}
+.reader-grid a{display:grid;align-content:start;gap:4px;text-decoration:none}.reader-grid img{width:100%;aspect-ratio:2/3;object-fit:contain;background:#183022}
+.reader-poster{max-width:100%;height:clamp(220px,42vh,420px);object-fit:contain}.reader li{padding:6px 0}
+body[data-interactive=true] #startupShelf{display:none}
+body:not([data-interactive=true]) > :is(.topbar,#returnHome,.site-footer){display:none}
+
+#startupShelf .exhibition-hero{padding:0;background:#1a3320}
+#startupShelf a{text-decoration:none;color:inherit}
+#startupShelf .btn-primary{color:#132c1b}
+#startupShelf .exhibition-note{font:500 clamp(17px,1.4vw,21px)/1.65 var(--font-cjk-serif);max-width:24em;margin:16px 0 20px;color:#fafbf1}
+#startupShelf .hero-actions a{align-self:center}
+#startupShelf .exhibition-selection{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:16px;margin-top:20px}
+#startupShelf details{padding-bottom:32px}
